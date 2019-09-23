@@ -108,7 +108,7 @@ public class ColliderBehaviour : MonoBehaviour {
         punto3BS = GameObject.Find("punto3BS");
         punto4AS = GameObject.Find("punto4AS");
         punto4BS = GameObject.Find("punto4BS");
-        //targetCanvas = GameObject.Find("targetCanvas");
+        targetCanvas = GameObject.Find("targetCanvas");
         //Femur = GameObject.Find("femurclean");
         Puntos1= GameObject.Find("puntos1");
         Puntos2 = GameObject.Find("puntos2");
@@ -175,7 +175,7 @@ public class ColliderBehaviour : MonoBehaviour {
         distanciaPunto3 = Vector3.Distance(punto3A.transform.position, punto3B.transform.position);
         distanciaPunto4 = Vector3.Distance(punto4A.transform.position, punto4B.transform.position);
 
-        //targetCanvas.transform.position = puntaBrocaPegada.transform.position + new Vector3(0.09f, 0.05f, 0.02f);
+        targetCanvas.transform.position = puntaBrocaPegada.transform.position + new Vector3(0.09f, 0.05f, 0.02f);
         //Debug.Log(targetCanvas.transform.position+"position");
 
         // color testigos

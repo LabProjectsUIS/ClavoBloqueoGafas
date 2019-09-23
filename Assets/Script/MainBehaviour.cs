@@ -132,13 +132,13 @@ public class MainBehaviour : MonoBehaviour {
 
     void Awake()
     {
-        camH = GameObject.Find("CameraHueso").GetComponent<Camera>();
-        camH2 = GameObject.Find("CameraHueso2").GetComponent<Camera>();
-        camP1 = GameObject.Find("CameraPiel1").GetComponent<Camera>();
-        CameraPiel2 = GameObject.Find("CameraPiel2").GetComponent<Camera>();
-        CameraPiel22 = GameObject.Find("CameraPiel22").GetComponent<Camera>();
-        CameraHueso22 = GameObject.Find("CameraHueso22").GetComponent<Camera>();
-        CamC = GameObject.Find("CameraCorona").GetComponent<Camera>();
+        // camH = GameObject.Find("CameraHueso").GetComponent<Camera>();
+        // camH2 = GameObject.Find("CameraHueso2").GetComponent<Camera>();
+        // camP1 = GameObject.Find("CameraPiel1").GetComponent<Camera>();
+        //CameraPiel2 = GameObject.Find("CameraPiel2").GetComponent<Camera>();
+        // CameraPiel22 = GameObject.Find("CameraPiel22").GetComponent<Camera>();
+        //CameraHueso22 = GameObject.Find("CameraHueso22").GetComponent<Camera>();
+       //CamC = GameObject.Find("CameraCorona").GetComponent<Camera>();
 
         flag = GameObject.Find("Flag");
         Indicador1 = GameObject.Find("Indicador1");
@@ -151,7 +151,7 @@ public class MainBehaviour : MonoBehaviour {
         collidScript = GameObject.Find("guiaCollider").GetComponent<ColliderBehaviour>();
         //Frame = GameObject.Find("MetaFrame");
         GafasRigid = GameObject.Find("Gafas");
-        //GafasFrame = GameObject.Find("GafasFrame");
+        GafasFrame = GameObject.Find("GafasFrame");
         //Femur = GameObject.Find("femurclean");
         //FemurRigid = GameObject.Find("Femur");
         //Guia = GameObject.Find("guia_model");
@@ -338,8 +338,8 @@ public class MainBehaviour : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        CamC.gameObject.SetActive(false);
-        CamC.gameObject.SetActive(true);
+        //CamC.gameObject.SetActive(false);
+        //CamC.gameObject.SetActive(true);
        
         Ray ray = new Ray(proyector1.transform.position, proyector1.transform.up * -1);
         RaycastHit hit;
@@ -526,8 +526,8 @@ public class MainBehaviour : MonoBehaviour {
         Indicador2.SetActive(false);
         Indicador3.SetActive(false);
         Indicador4.SetActive(false);
-        camP1.nearClipPlane = 0.01f;
-        camH.nearClipPlane = 0.13f;
+        // camP1.nearClipPlane = 0.01f;
+        //camH.nearClipPlane = 0.13f;
         m = true;
 
     }
@@ -545,8 +545,8 @@ public class MainBehaviour : MonoBehaviour {
         Indicador2.SetActive(true);
         Indicador3.SetActive(false);
         Indicador4.SetActive(false);
-        camP1.nearClipPlane = 0.42f;
-        camH.nearClipPlane = 0.22f;
+        //camP1.nearClipPlane = 0.42f;
+        //camH.nearClipPlane = 0.22f;
         m = true;
     }
     public void punto3Select()
@@ -563,8 +563,8 @@ public class MainBehaviour : MonoBehaviour {
         Indicador2.SetActive(false);
         Indicador3.SetActive(true);
         Indicador4.SetActive(false);
-        camP1.nearClipPlane = 0.70f;
-        camH.nearClipPlane = 0.49f;
+        //camP1.nearClipPlane = 0.70f;
+        //camH.nearClipPlane = 0.49f;
         m = false;
     }
     public void punto4Select()
@@ -581,8 +581,8 @@ public class MainBehaviour : MonoBehaviour {
         Indicador2.SetActive(false);
         Indicador3.SetActive(false);
         Indicador4.SetActive(true);
-        camP1.nearClipPlane = 0.762f;
-        camH.nearClipPlane = 0.55f;
+        //camP1.nearClipPlane = 0.762f;
+        //camH.nearClipPlane = 0.55f;
         m = false;
     }
 
@@ -637,28 +637,28 @@ public class MainBehaviour : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 punto1Select();
-                CameraPiel22.gameObject.SetActive(false);
-                CameraPiel2.gameObject.SetActive(true);
+                // CameraPiel22.gameObject.SetActive(false);
+                //CameraPiel2.gameObject.SetActive(true);
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 punto2Select();
-                CameraPiel22.gameObject.SetActive(false);
-                CameraPiel2.gameObject.SetActive(true);
+                //CameraPiel22.gameObject.SetActive(false);
+                //CameraPiel2.gameObject.SetActive(true);
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 punto3Select();
 
-                CameraPiel2.gameObject.SetActive(false);
-                CameraPiel22.gameObject.SetActive(true);
+                //CameraPiel2.gameObject.SetActive(false);
+                //CameraPiel22.gameObject.SetActive(true);
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 punto4Select();
 
-                CameraPiel2.gameObject.SetActive(false);
-                CameraPiel22.gameObject.SetActive(true);
+                //CameraPiel2.gameObject.SetActive(false);
+                //CameraPiel22.gameObject.SetActive(true);
             }
 
         }
@@ -671,26 +671,26 @@ public class MainBehaviour : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 punto1Select();
-                CameraHueso22.gameObject.SetActive(false);
-               
+                //CameraHueso22.gameObject.SetActive(false);
+
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 punto2Select();
-                CameraHueso22.gameObject.SetActive(false);
-               
+                // CameraHueso22.gameObject.SetActive(false);
+
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 punto3Select();
-                
-                CameraHueso22.gameObject.SetActive(true);
-               
+
+                // CameraHueso22.gameObject.SetActive(true);
+
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                punto4Select(); 
-                CameraHueso22.gameObject.SetActive(true);
+                punto4Select();
+                //CameraHueso22.gameObject.SetActive(true);
             }
         }
 

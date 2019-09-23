@@ -46,14 +46,14 @@ public class register : MonoBehaviour {
     {
         Piel = GameObject.Find("CONOHueco");
         flag = GameObject.Find("Flag");
-        camH = GameObject.Find("CameraHueso").GetComponent<Camera>();
-        camH2 = GameObject.Find("CameraHueso2").GetComponent<Camera>();
-        camC = GameObject.Find("CameraCorona").GetComponent<Camera>();
-        camP1 = GameObject.Find("CameraPiel1").GetComponent<Camera>();
-        camP2 = GameObject.Find("CameraPiel2").GetComponent<Camera>();
-        CameraPiel22 = GameObject.Find("CameraPiel22").GetComponent<Camera>();
-        CameraHueso22 = GameObject.Find("CameraHueso22").GetComponent<Camera>();
-        targetCamera = GameObject.Find("CameraTarget").GetComponent<Camera>();
+        //camH = GameObject.Find("CameraHueso").GetComponent<Camera>();
+        //camH2 = GameObject.Find("CameraHueso2").GetComponent<Camera>();
+        //camC = GameObject.Find("CameraCorona").GetComponent<Camera>();
+        //camP1 = GameObject.Find("CameraPiel1").GetComponent<Camera>();
+        //camP2 = GameObject.Find("CameraPiel2").GetComponent<Camera>();
+        //CameraPiel22 = GameObject.Find("CameraPiel22").GetComponent<Camera>();
+        //CameraHueso22 = GameObject.Find("CameraHueso22").GetComponent<Camera>();
+        //targetCamera = GameObject.Find("CameraTarget").GetComponent<Camera>();
 
         e1 = GameObject.Find("e1");
         e2 = GameObject.Find("e2");
@@ -81,15 +81,15 @@ public class register : MonoBehaviour {
     }
     private void Start()
     {
-       // offset = camP1.transform.position - GameObject.Find("proyector1").GetComponent<Transform>().position;
-        camH.gameObject.SetActive(false);
-        camH2.gameObject.SetActive(false);
-        camP1.gameObject.SetActive(true);
-        camP2.gameObject.SetActive(true);
-        CameraPiel22.gameObject.SetActive(false);
-        targetCamera.gameObject.SetActive(false);
-        camC.gameObject.SetActive(true);
-        CameraHueso22.gameObject.SetActive(false);
+        // offset = camP1.transform.position - GameObject.Find("proyector1").GetComponent<Transform>().position;
+        //camH.gameObject.SetActive(false);
+        //camH2.gameObject.SetActive(false);
+        // camP1.gameObject.SetActive(true);
+        // camP2.gameObject.SetActive(true);
+        //CameraPiel22.gameObject.SetActive(false);
+        // targetCamera.gameObject.SetActive(false);
+       //amC.gameObject.SetActive(true);
+        // CameraHueso22.gameObject.SetActive(false);
         // camP2.gameObject.SetActive(true);
         //camD.transform.position = new Vector3(0.033f, 0.1861f, 0.98542f);
         /* camP1.gameObject.SetActive(true);
@@ -111,9 +111,9 @@ public class register : MonoBehaviour {
         
         registrar();
         Render();
-        Cameras();
-       
-        camC.gameObject.SetActive(true);
+        //Cameras();
+
+        //camC.gameObject.SetActive(true);
 
         //camP1.transform.position = GameObject.Find("proyector1").GetComponent<Transform>().position;
         //camD.transform.LookAt(GameObject.Find("proyector1").GetComponent<Transform>().position);
@@ -129,9 +129,9 @@ public class register : MonoBehaviour {
             Piel.SetActive(true);
           flag.SetActive(true);
             //Proximales on
-            camH.gameObject.SetActive(false);
-            camH2.gameObject.SetActive(false);
-           
+            //camH.gameObject.SetActive(false);
+            //camH2.gameObject.SetActive(false);
+
             camP1.gameObject.SetActive(true);
             camP2.gameObject.SetActive(true);
             targetCamera.gameObject.SetActive(false);
