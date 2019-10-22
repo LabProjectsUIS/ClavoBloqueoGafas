@@ -57,7 +57,7 @@ namespace Meta
                 StopCoroutine(_calibration);
             }
 
-            _calibration = StartCoroutine(FullCalibration(initializationType));
+            //_calibration = StartCoroutine(FullCalibration(initializationType));
         }
 
         /// <summary>

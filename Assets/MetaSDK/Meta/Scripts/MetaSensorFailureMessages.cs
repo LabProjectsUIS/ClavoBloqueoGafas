@@ -46,8 +46,8 @@ namespace Meta
 
         public void Init(IEventHandlers eventHandlers)
         {
-            eventHandlers.SubscribeOnStart(CheckSensors);
-            eventHandlers.SubscribeOnApplicationQuit(()=> { _controller.Destroy(); });
+            //eventHandlers.SubscribeOnStart(CheckSensors); TEMPORAL
+            //eventHandlers.SubscribeOnApplicationQuit(()=> { _controller.Destroy(); });
         }
 
         private void CheckSensors()

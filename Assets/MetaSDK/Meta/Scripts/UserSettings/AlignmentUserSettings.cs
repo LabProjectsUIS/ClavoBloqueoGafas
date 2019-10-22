@@ -117,7 +117,7 @@ namespace Meta
             // in Unity's main thread. Modifying transforms in other threads will not work.
             if (_alignmentUpdateOccured)
             {
-                _LoadCameraPositions();
+                //_LoadCameraPositions();
                 _alignmentUpdateOccured = false;
             }
         }

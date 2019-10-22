@@ -54,7 +54,6 @@ public class register : MonoBehaviour {
         //CameraPiel22 = GameObject.Find("CameraPiel22").GetComponent<Camera>();
         //CameraHueso22 = GameObject.Find("CameraHueso22").GetComponent<Camera>();
         //targetCamera = GameObject.Find("CameraTarget").GetComponent<Camera>();
-
         e1 = GameObject.Find("e1");
         e2 = GameObject.Find("e2");
         e3 = GameObject.Find("e3");
@@ -76,8 +75,6 @@ public class register : MonoBehaviour {
         tibia = GameObject.Find("clavoclean");
         tibiaM = GameObject.Find("clavomodel");
         tibiaR = GameObject.Find("Tibia");
-       
-
     }
     private void Start()
     {
@@ -99,25 +96,19 @@ public class register : MonoBehaviour {
          camD2.gameObject.SetActive(false);
          camD3.gameObject.SetActive(false);*/
         //camP1.transform.LookAt(GameObject.Find("proyector1").GetComponent<Transform>().position);
-
     }
     private void LateUpdate()
     {
         //camP1.transform.position = GameObject.Find("proyector1").GetComponent<Transform>().position + offset;
-    }
-
-    // Update is called once per frame
-    void Update () {
-        
+    }// Update is called once per frame
+    void Update ()
+    {
         registrar();
         Render();
         //Cameras();
-
         //camC.gameObject.SetActive(true);
-
         //camP1.transform.position = GameObject.Find("proyector1").GetComponent<Transform>().position;
         //camD.transform.LookAt(GameObject.Find("proyector1").GetComponent<Transform>().position);
-
         // camD.transform.position = GameObject.Find("proyector1").GetComponent<Transform>().position;
     }
     void Cameras()
@@ -127,11 +118,10 @@ public class register : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Piel.SetActive(true);
-          flag.SetActive(true);
+            flag.SetActive(true);
             //Proximales on
             //camH.gameObject.SetActive(false);
             //camH2.gameObject.SetActive(false);
-
             camP1.gameObject.SetActive(true);
             camP2.gameObject.SetActive(true);
             targetCamera.gameObject.SetActive(false);
@@ -139,8 +129,7 @@ public class register : MonoBehaviour {
         }
         //phase 2
         if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            //Distales on
+        { //Distales on
             Piel.SetActive(false);
             flag.SetActive(false);
             m = false;
@@ -150,7 +139,6 @@ public class register : MonoBehaviour {
             camP2.gameObject.SetActive(false);
             targetCamera.gameObject.SetActive(false);
             camC.gameObject.SetActive(false);
-
         }
         if (!flag.gameObject.activeInHierarchy) { targetCamera.gameObject.SetActive(false); targetCamera.gameObject.SetActive(true); targetCamera.nearClipPlane = 0.06f;}
     }
@@ -160,7 +148,6 @@ public class register : MonoBehaviour {
         f1.transform.parent = femurM.transform;
         fl1.transform.parent = femurM.transform;
         e1.transform.parent = null;
-
     }
     void regresarTibia()
     {
@@ -325,7 +312,8 @@ public class register : MonoBehaviour {
         guiaModel.transform.LookAt(sphereLarga.transform);
         guiaModel.transform.Rotate(+90, 0, 0);
     }
-    public void registrarFemur0() {
+    public void registrarFemur0()
+    {
 
         femur.transform.parent = null;
         f1.GetComponent<MeshRenderer>().enabled = true;

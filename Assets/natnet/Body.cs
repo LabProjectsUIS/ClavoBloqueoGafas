@@ -199,9 +199,9 @@ public class Body : MonoBehaviour
             }
             if (objectName == "Guia")
             {
-            //    bone.transform.position = new Vector3(qx / 1000, qy / 1000, qz / 1000);
-            //    puntaPointer.transform.position = position;
-            //    bone.transform.LookAt(puntaPointer.transform);
+               // bone.transform.position = new Vector3(qx / 1000, qy / 1000, qz / 1000);
+               //    puntaPointer.transform.position = position;
+               //    bone.transform.LookAt(puntaPointer.transform);
                 brocaPerdida = false;
                 bone.transform.position = position;
                 bone.transform.rotation = orientation;
@@ -224,11 +224,11 @@ public class Body : MonoBehaviour
         }
         if (brocaPerdida)
         {
-            brocaVisible.SetActive(true);
+            brocaVisible.SetActive(false);
         }
         else
         {
-            brocaVisible.SetActive(false);
+            brocaVisible.SetActive(true);
         }
         brocaPerdida = true;
     }

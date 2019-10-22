@@ -42,7 +42,7 @@ namespace Meta
 
         private void Update()
         {
-            if (!_sensorsInitialized)
+           /* if (!_sensorsInitialized)
             {
                 Internal.SensorMetaData sensorMetaData = new Internal.SensorMetaData();
                 if (HandKernelInterop.GetSensorMetaData(ref sensorMetaData))
@@ -53,10 +53,10 @@ namespace Meta
             }
             else if (!_initializedHandsModule)
             {
-                var context = Object.FindObjectOfType<MetaContextBridge>().CurrentContext;
+                //var context = Object.FindObjectOfType<MetaContextBridge>().CurrentContext;TEMPORAL
                 context.Get<HandsModule>().Initialized = true;
                 _initializedHandsModule = true;
-            }
+            }*/
         }
 
         private void OnApplicationQuit()

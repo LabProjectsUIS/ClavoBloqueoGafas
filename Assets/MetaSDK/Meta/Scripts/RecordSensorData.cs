@@ -53,7 +53,7 @@ namespace Meta
             [MarshalAs(UnmanagedType.U1)]
             internal bool enableMonochromeRecording; ///< true to enable, false to disable the monochrome recording
             [MarshalAs(UnmanagedType.U1)]
-            internal bool enableImuRecording;        ///< true to enable, false to disable the imu recording
+            //internal bool enableImuRecording;   TEMPORAL     ///< true to enable, false to disable the imu recording
             internal double recordDepthFps;          ///< The record depth FPS
             internal double recordColorFps;          ///< The record color FPS
             internal double recordMonochromeFps;     ///< The record monochrome FPS
@@ -72,7 +72,7 @@ namespace Meta
             public bool enableLeanDepthRecording;      ///< true to enable, false to disable the lean depth recording
             public bool enableColorRecording;      ///< true to enable, false to disable the color recording
             public bool enableMonochromeRecording; ///< true to enable, false to disable the monochrome recording
-            public bool enableImuRecording;        ///< true to enable, false to disable the imu recording
+            //public bool enableImuRecording;        ///< true to enable, false to disable the imu recording TEMPORAL
             [Range(1, 60)]
             public double recordDepthFps;          ///< The record depth FPS
             [Range(1, 60)]
@@ -90,7 +90,7 @@ namespace Meta
                 recordConfig.enableLeanDepthRecording = enableLeanDepthRecording;
                 recordConfig.enableColorRecording = enableColorRecording;
                 recordConfig.enableMonochromeRecording = enableMonochromeRecording;
-                recordConfig.enableImuRecording = enableImuRecording;
+               // recordConfig.enableImuRecording = enableImuRecording; temporal
 
                 recordConfig.recordColorFps = recordColorFps;
                 recordConfig.recordDepthFps = recordDepthFps;

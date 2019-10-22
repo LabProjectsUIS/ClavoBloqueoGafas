@@ -89,11 +89,11 @@ namespace Meta
                 return;
             }
 
-            slamLocalizer.onSlamSensorsReady.AddListener(BeginLocalizationEvent);
-            slamLocalizer.onSlamLocalizerResetEvent.AddListener(BeginLocalizationEvent);
+            //slamLocalizer.onSlamSensorsReady.AddListener(BeginLocalizationEvent); TEMPORAL
+           // slamLocalizer.onSlamLocalizerResetEvent.AddListener(BeginLocalizationEvent);
 
-            slamLocalizer.onSlamMappingComplete.AddListener(() => { EndLocalizationEvent(true); });
-            slamLocalizer.onSlamInitializationFailed.AddListener(() => { EndLocalizationEvent(false); });
+            //slamLocalizer.onSlamMappingComplete.AddListener(() => { EndLocalizationEvent(true); });
+            // slamLocalizer.onSlamInitializationFailed.AddListener(() => { EndLocalizationEvent(false); });
 
         }
 

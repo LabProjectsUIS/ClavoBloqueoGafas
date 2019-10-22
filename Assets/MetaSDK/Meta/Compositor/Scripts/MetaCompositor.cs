@@ -86,25 +86,25 @@ namespace Meta
         [Range(0, 1)]
         [HideInInspector]
         [Tooltip("Strength of temporal filter, which acts as momentum")]
-        private float _temporalMomentum = 0.80f;
+        private float _temporalMomentum = 0; //0.80f;
 
         [SerializeField]
         [Range(1, 5)]
         [HideInInspector]
         [Tooltip("Filter size of the feather on the edge of hand occlusion")]
-        private int _featherSize = 3;
+        private int _featherSize = 1;
 
         [SerializeField]
         [Range(1, 32)]
         [HideInInspector]
         [Tooltip("How fast the opacity falls off at the edge of the feather")]
-        private float _featherFalloffExponent = 8;
+        private float _featherFalloffExponent = 0;
 
         [SerializeField]
         [Range(0, 1)]
         [HideInInspector]
         [Tooltip("Cutoff feather opacity, below which pixels are thrown out")]
-        private float _featherCutoff = 0.8f;
+        private float _featherCutoff = 0f;
 
         /// <summary>
         /// Whether occlusion was enabled at launch time. This is used to restore the previous state after the SLAM initialization is dismissed.
@@ -120,7 +120,6 @@ namespace Meta
         private void Start()
         {
             MetaCompositorInterop.InitCompositor(_enableAsyncLateWarp);
-
             // Setup rendertargets for stereo cameras
             var rt_left = new RenderTexture(2048, 2048, 24, RenderTextureFormat.ARGB32);
             var rt_right = new RenderTexture(2048, 2048, 24, RenderTextureFormat.ARGB32);

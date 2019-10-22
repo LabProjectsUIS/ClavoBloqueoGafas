@@ -64,10 +64,10 @@ namespace Meta
         }
         #region Public Events
 
-        [System.Serializable]
-        public class SLAMSensorsReadyEvent : UnityEvent { }
-        [System.Serializable]
-        public class SLAMMappingInProgressEvent : UnityEvent<float> { }
+        //[System.Serializable]TEMPORAL
+        //public class SLAMSensorsReadyEvent : UnityEvent { } TEMPORAL
+        //[System.Serializable]
+        //public class SLAMMappingInProgressEvent : UnityEvent<float> { }
         [System.Serializable]
         public class SLAMMappingCompleteEvent : UnityEvent { }
         [System.Serializable]
@@ -81,8 +81,8 @@ namespace Meta
         [System.Serializable]
         public class SLAMLocalizerResetEvent : UnityEvent { }
 
-        public SLAMSensorsReadyEvent onSlamSensorsReady = null;
-        public SLAMMappingInProgressEvent onSlamMappingInProgress = null;
+       // public SLAMSensorsReadyEvent onSlamSensorsReady = null; TEMPORAL
+        //public SLAMMappingInProgressEvent onSlamMappingInProgress = null;
         public SLAMMappingCompleteEvent onSlamMappingComplete = null;
         public SLAMMapLoadingFailedEvent onSlamMapLoadingFailedEvent = null;
         public SLAMTrackingLostEvent onSlamTrackingLost = null;
@@ -160,7 +160,7 @@ namespace Meta
 
         private void Start()
         {
-            _slamUiPrefab = (GameObject)Resources.Load(SlamUIPrefabName);
+           // _slamUiPrefab = (GameObject)Resources.Load(SlamUIPrefabName); TEMPORAL
             _fromCompositor = (FindObjectOfType<MetaCompositor>() != null);
             gameObject.AddComponent<SlamTrackingUILoader>();
             if (_initSlamOnStart)
@@ -378,13 +378,13 @@ namespace Meta
 
             if (_slamUiPrefab != null)
             {
-                _slamUI = Instantiate(_slamUiPrefab);
+                //_slamUI = Instantiate(_slamUiPrefab); TEMPORAL
                 BaseSlamGuide slamGuide = _slamUI.GetComponent<BaseSlamGuide>();
                 slamGuide.StartTrackCalibrationSteps(initializationType);
             }
             else
             {
-                Debug.LogError("Could not locate SLAM UI resource.");
+               // Debug.LogError("Could not locate SLAM UI resource.");
             }
         }
 
@@ -398,17 +398,17 @@ namespace Meta
 
             if (thisFrame.CameraReady && !previousFrame.CameraReady && thisFrame.scale_quality_percent == 0)
             {
-                onSlamSensorsReady.Invoke();
+                //onSlamSensorsReady.Invoke(); TEMPORAL
             }
 
             if (thisFrame.CameraReady && thisFrame.TrackingReady && thisFrame.scale_quality_percent > 0 && thisFrame.scale_quality_percent < 100)
             {
-                onSlamMappingInProgress.Invoke(thisFrame.scale_quality_percent / 100f);
+                //onSlamMappingInProgress.Invoke(thisFrame.scale_quality_percent / 100f);TEMPORAL
             }
 
             if (thisFrame.CameraReady && thisFrame.TrackingReady && thisFrame.scale_quality_percent >= 100 && _initializationState == SlamInitializationState.InitialMapping)
             {
-                SetState(SlamInitializationState.Mapping);
+                //SetState(SlamInitializationState.Mapping);TEMPORAL
             }
 
             // vislam tracking ready

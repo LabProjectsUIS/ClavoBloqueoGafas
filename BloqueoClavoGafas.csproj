@@ -518,6 +518,7 @@
     <Compile Include="Assets\Script\interfaz\Sprites.cs" />
     <Compile Include="Assets\Script\mainScript.cs" />
     <Compile Include="Assets\Script\register.cs" />
+    <Compile Include="Assets\Transforms.cs" />
     <Compile Include="Assets\natnet\Body.cs" />
     <Compile Include="Assets\natnet\SlipStream.cs" />
     <Compile Include="Assets\position.cs" />

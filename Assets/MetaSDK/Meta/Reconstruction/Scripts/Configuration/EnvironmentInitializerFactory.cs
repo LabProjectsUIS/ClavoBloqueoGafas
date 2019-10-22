@@ -52,7 +52,7 @@ namespace Meta.Reconstruction
         {
             if (metaContext == null)
             {
-                throw new ArgumentNullException("metaContext");
+                //throw new ArgumentNullException("metaContext");
             }
 
             _metaContext = metaContext;

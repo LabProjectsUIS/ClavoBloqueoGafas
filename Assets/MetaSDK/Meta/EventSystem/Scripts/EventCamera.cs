@@ -56,8 +56,8 @@ namespace Meta
 
         private void Awake()
         {
-            _camera = GetComponent<Camera>();
-            metaContext.Add<IEventCamera>(this);
+            //camera = GetComponent<Camera>();
+           // metaContext.Add<IEventCamera>(this);
         }
 
         private void OnDestroy()

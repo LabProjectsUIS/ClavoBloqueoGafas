@@ -52,7 +52,7 @@ namespace Meta
             }
 
             transform.LookAt(target);
-            transform.rotation *= Quaternion.Euler(180, 0, 0);
+            transform.rotation *= Quaternion.Euler(180, 0, 0); 
         }
     }
 

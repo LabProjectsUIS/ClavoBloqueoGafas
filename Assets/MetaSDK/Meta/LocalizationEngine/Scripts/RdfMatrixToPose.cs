@@ -58,12 +58,12 @@ namespace Meta
         {
             _poseMatrix = Matrix4x4.identity;
             //Get the module from the metaContext
-            CalibrationParameters pars = metaContext.Get<CalibrationParameters>();
-            if (pars != null) //the metaContext may not have the module if it was not loaded correctly.
+           // CalibrationParameters pars = metaContext.Get<CalibrationParameters>(); TEMPORAL
+           /* if (pars != null) //the metaContext may not have the module if it was not loaded correctly.
             {
                 //Will be called when the parameters have been loaded.
                 pars.OnParametersReady += CalibratePose;
-            }
+            }*/
         }
 
         /// <summary>

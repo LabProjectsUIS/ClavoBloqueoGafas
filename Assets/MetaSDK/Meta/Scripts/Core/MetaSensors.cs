@@ -105,18 +105,18 @@ namespace Meta
 
         private void Awake()
         {
-            if (_dataAcquisitionSystem == DataAcquisitionSystem.Playback)
+           /*if (_dataAcquisitionSystem == DataAcquisitionSystem.Playback)
             {
                 if (_sensorPlaybackPath == null)
                     throw new Exception("No playback path specified!");
                 if (!Directory.Exists(_sensorPlaybackPath))
                     throw new Exception("Directory \"" + _sensorPlaybackPath + "\" does not exist!");
                 InitMetaVisionPlayback(_sensorPlaybackPath);
-            }
-            else
-            {
-                InitMetaVisionCamera(_dataAcquisitionSystem, ref _deviceInfo, IMUModel.UnknownIMU);
-            }
+            }*/
+            //else
+            //{ INICIALIZAR CAMERAS TEMPORAL
+               InitMetaVisionCamera(_dataAcquisitionSystem, ref _deviceInfo, IMUModel.UnknownIMU);
+            //}
             EnableVirtualWebcam();
         }
 
