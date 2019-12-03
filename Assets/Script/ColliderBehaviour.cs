@@ -83,7 +83,7 @@ public class ColliderBehaviour : MonoBehaviour {
         punto2Line = GameObject.Find("punto2Line").GetComponent<LineRenderer>();
         punto3Line = GameObject.Find("punto3Line").GetComponent<LineRenderer>();
         punto4Line = GameObject.Find("punto4Line").GetComponent<LineRenderer>();
-        guiaLine = GameObject.Find("guiaLine").GetComponent<LineRenderer>();
+        //guiaLine = GameObject.Find("guiaLine").GetComponent<LineRenderer>();
         testigoCir = GameObject.Find("circleProgress").GetComponent<Image>();
         testigoTrapecio = GameObject.Find("TrapecioFull").GetComponent<Image>();
         perforando = GameObject.Find("perforando");
@@ -140,7 +140,7 @@ public class ColliderBehaviour : MonoBehaviour {
         punto3Line.material.SetColor("_EmissionColor", rojo);
         punto4Line.material.SetColor("_EmissionColor", rojo);
 
-        guiaLine.material.color = azul;
+        //guiaLine.material.color = azul;
         punto1A.GetComponent<Renderer>().material.color = rojo;
         punto1B.GetComponent<Renderer>().material.color = rojo;
         punto2A.GetComponent<Renderer>().material.color = rojo;
@@ -175,7 +175,7 @@ public class ColliderBehaviour : MonoBehaviour {
         distanciaPunto3 = Vector3.Distance(punto3A.transform.position, punto3B.transform.position);
         distanciaPunto4 = Vector3.Distance(punto4A.transform.position, punto4B.transform.position);
 
-        targetCanvas.transform.position = puntaBrocaPegada.transform.position + new Vector3(0.09f, 0.05f, 0.02f);
+        targetCanvas.transform.position = puntaBrocaPegada.transform.position + new Vector3(0.01f, 0.05f, 0.02f);
         //Debug.Log(targetCanvas.transform.position+"position");
 
         // color testigos

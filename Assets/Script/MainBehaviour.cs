@@ -227,11 +227,6 @@ public class MainBehaviour : MonoBehaviour {
     }
     void Start()
     {
-
-        
-      
-
-
         punto1Select();
 
         //4 points coordinates: tibiaA, tibiaB, femurA, femurB
